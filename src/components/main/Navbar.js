@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FaUtensils } from 'react-icons/fa';
 
 export class Navbar extends Component {
 	render() {
 		return (
 			<nav className="navbar navbar-dark bg-primary">
 				<Link to={`/`} className="navbar-brand">
-					Can I Make It?
+					<FaUtensils />
 				</Link>
 				<ul className="navbar-nav ml-auto">
 					<li className="nav-item">
-						<Link to={`/profile`} className="nav-link">
+					<a href="login.html" className="nav-link">
 							Profile
-						</Link>
+					</a>
 					</li>
 				</ul>
 			</nav>

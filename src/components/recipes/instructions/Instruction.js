@@ -9,7 +9,7 @@ const Instruction = (props) => {
 			</div>
 			<div className="card-body">
 				<h5 className="card-title">
-					METHOD: <span className="text-primary">{instruction.step}</span>
+					<span className="text-primary">{instruction.step}</span>
 				</h5>
 				<h6 className="card-text">
 					{instruction.ingredients.length > 0 ? 'INGREDIENTS:' : ''}

@@ -38,21 +38,22 @@ class Recipes extends Component {
 			<React.Fragment>
 				<div className="card card-body mb-4 p-4">
 					<h1 className="display-4 text-center">
-						Search For A Recipe
+						Can I Make It?
 					</h1>
-					<p className="lead text-center">Get the instructions for any recipe</p>
+					<p className="lead text-center">Get the instructions for any recipe by entering the recipe name or what ingredients you have.</p>
+					<p className="text-center">When entering ingredients please separate them with commas (ex. chicken, rice, carrots)</p>
 					<form onSubmit={this.findRecipe}>
 						<div className="form-group">
 							<input
 								type="text"
 								className="form-control form-control-lg"
-								placeholder="Recipe Title..."
+								placeholder="Recipe Title or List of Ingredients..."
 								name="recipeTitle"
 								value={recipeTitle}
-								onChange={this.onChange}
-							/>
+								onChange={this.onChange} />
+							
 						</div>
-						<button className="btn btn-primary btn-lg btn-block mb-5" type="submit">
+						<button className="btn btn-primary btn-lg btn-block mb-5  btn-user" type="submit">
 							Get Recipes
 						</button>
 					</form>
