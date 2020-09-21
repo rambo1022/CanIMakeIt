@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Spinner from '../../main/Spinner';
 import Instruction from './Instruction';
 import Axios from 'axios';
 
@@ -24,9 +23,6 @@ export class Instructions extends Component {
 	render() {
 		const { instructions } = this.state;
 
-		if (instructions === undefined || Object.keys(instructions).length === 0) {
-			return <Spinner />;
-		} else {
 			return (
 				<React.Fragment>
 					<div className="row">
@@ -44,6 +40,6 @@ export class Instructions extends Component {
 			);
 		}
 	}
-}
+
 
 export default Instructions;

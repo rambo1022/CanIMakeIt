@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import Recipe from './Recipe';
 
-class Recipes extends Component {
+export default class Recipes extends Component {
+	
 	state = {
 		recipeTitle: '',
 		heading: '',
 		recipes: []
-	};
+	}	
 
 	findRecipe = async (e) => {
 		e.preventDefault(); // To stop reloading after every click event
@@ -25,11 +26,11 @@ class Recipes extends Component {
 				});
 			})
 			.catch((err) => console.log(err));
-	};
+	}
 
 	onChange = (e) => {
 		this.setState({ [e.target.name]: e.target.value });
-	};
+	}
 
 	render() {
 		const { recipes, heading, recipeTitle } = this.state;
@@ -62,8 +63,6 @@ class Recipes extends Component {
 				<h3 className="text-center mb-4">{heading}</h3>
 				<div className="row">{recipes.map((item) => <Recipe key={item.id} recipe={item} />)}</div>
 			</React.Fragment>
-		);
+		)
 	}
 }
-
-export default Recipes;
